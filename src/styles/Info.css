@@ -1,0 +1,41 @@
+.info {
+  display: flex;
+  margin: 2rem;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.info > h1 {
+  font-size: xx-large;
+  margin: 2rem 0;
+}
+
+.info > p {
+  align-self: flex-start;
+}
+
+.info > ul {
+  list-style: none;
+  gap: 1rem;
+}
+
+.info > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info > ul > li > :nth-child(1) > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 375px) {
+  .info > h1 {
+    font-size: 5rem;
+  }
+}

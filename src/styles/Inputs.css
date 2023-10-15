@@ -1,0 +1,31 @@
+.inputs {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs > * {
+  margin-bottom: 0.3rem;
+}
+
+.inputs > label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inputs > input {
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+}
+
+.inputs > input[type="email"] {
+  border: 0.15rem solid hsl(231, 7%, 60%);
+  margin-bottom: 2rem;
+}
+
+.inputs > input[type="submit"] {
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}

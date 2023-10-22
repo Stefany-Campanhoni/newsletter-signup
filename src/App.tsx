@@ -1,40 +1,28 @@
 import "./App.css"
 
-import Info from "./components/Info"
-import Inputs from "./components/Inputs"
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import Signup from "./pages/Signup";
+import Success from "./pages/Success";
 
-import MobileSvg from "./assets/images/illustration-sign-up-mobile.svg?react"
-import DesktopSvg from "./assets/images/illustration-sign-up-desktop.svg?react"
-import { useEffect, useState } from "react"
 
-function getWindowWidth():number {
-  return window.innerWidth
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Signup />,
+  },
+  {
+    path: "/success",
+    element: <Success  />,
+  },
+  {
+    path: "*",
+    element: <Navigate to={"/"} />
+  }
+])
 
 function App() {
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowWidth(getWindowWidth())
-    }
-
-    window.addEventListener("resize", handleWindowResize)
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize)
-    }
-  }, [])
-
-  const [windowWidth, setWindowWidth] = useState(getWindowWidth())
-
   return (
-    <div className="container">
-      {windowWidth > 375 ? <DesktopSvg /> : <MobileSvg />}
-      <div className="info-wrapper">
-        <Info />
-        <Inputs />
-      </div>
-    </div>
+    <RouterProvider router={router} />
   )
 }
 

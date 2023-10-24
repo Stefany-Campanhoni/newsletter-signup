@@ -2,6 +2,7 @@ import "../styles/Inputs.css"
 
 import { useForm, SubmitHandler, Controller } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
+import Button from "./Button"
 
 type Inputs = {
   email: string
@@ -56,9 +57,7 @@ export default function Inputs() {
         )}
       />
 
-      <button type="submit">
-        <span>Subscribe to monthly newsletter</span>
-      </button>
+      <Button name="Subscribe to monthly newsletter" type="submit" />
     </form>
   )
 }

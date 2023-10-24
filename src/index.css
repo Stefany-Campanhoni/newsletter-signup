@@ -20,3 +20,17 @@
   font-size: 62.5%;
   background-color: hsl(0, 0%, 100%);
 }
+
+@media screen and (min-width: 375px) {
+  body {
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem;
+    background-color: hsl(235, 18%, 26%);
+  }
+  
+}

@@ -7,3 +7,12 @@
 
   overflow-x: hidden;
 }
+
+@media screen and (min-width: 375px) {
+  #root {
+    max-width: 1440px;
+
+    background-color: white;
+    border-radius: 1.5rem;
+  }
+}

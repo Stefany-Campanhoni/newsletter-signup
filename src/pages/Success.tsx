@@ -1,3 +1,5 @@
+import "../styles/Success.css"
+
 import { useLocation, Navigate } from "react-router-dom"
 import SuccessIcon from "../assets/images/icon-success.svg?react"
 import Button from "../components/Button"
@@ -20,7 +22,12 @@ export default function Success() {
         </p>
       </div>
 
-      <Button name="Dismiss message" type="button" />
+      <div>
+        <Button
+          name="Dismiss message"
+          type="button"
+        />
+      </div>
     </section>
   )
 }

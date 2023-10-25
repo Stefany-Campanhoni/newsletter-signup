@@ -1,3 +1,59 @@
 .Success {
-  /* todo: style this page */
+  height: 100vh;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.Success > :first-child {
+  align-self: self-end;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.Success > :last-child {
+  align-self: self-end;
+}
+
+.Success > :first-child > h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.Success > :first-child > p {
+  line-height: 2.5rem;
+}
+
+
+@media screen and (min-width: 375px) {
+  #root {
+    max-width: 50%;
+  }
+
+  .Success {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Success > :first-child {
+    gap: 0;
+    margin-top: 0;
+  }
+
+  .Success > :first-child > * {
+    margin-bottom: 3rem;
+  }
+
+  .Success > :last-child {
+    width: 100%;
+  }
+
+  .Success > :last-child > :first-child {
+    width: inherit;
+  }
 }

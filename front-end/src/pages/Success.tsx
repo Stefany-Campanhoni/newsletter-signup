@@ -1,14 +1,19 @@
 import "../styles/Success.css"
 
-import { useLocation, Navigate } from "react-router-dom"
+import { NavigateFunction, useLocation, useNavigate } from "react-router-dom"
 import SuccessIcon from "../assets/images/icon-success.svg?react"
 import Button from "../components/Button"
 
 export default function Success() {
   const email: string = useLocation().state
+  const navigate: NavigateFunction = useNavigate()
 
   if (!email) {
-    return <Navigate to={"/"} />
+    redirectToPrincipal()
+  }
+
+  function redirectToPrincipal() {
+    navigate("/")
   }
 
   return (
@@ -26,6 +31,7 @@ export default function Success() {
         <Button
           name="Dismiss message"
           type="button"
+          onClick={redirectToPrincipal}
         />
       </div>
     </section>

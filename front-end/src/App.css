@@ -1,5 +1,4 @@
 #root {
-  max-width: 375px;
   margin: 0 auto;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -10,9 +9,8 @@
 
 @media screen and (min-width: 375px) {
   #root {
-    max-width: 1440px;
-
-    background-color: white;
-    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

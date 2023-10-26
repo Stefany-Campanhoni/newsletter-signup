@@ -1,4 +1,6 @@
 .container {
+  max-width: 375px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,11 +8,15 @@
 
 @media screen and (min-width: 375px) {
   .container {
+    max-width: 1440px;
+    background-color: white;
+    border-radius: 1.5rem;
+
     display: grid;
 
     grid-template-areas: "infos svg";
 
-    margin: 2rem;
+    padding: 2rem;
   }
 
   .container > :first-child {
